@@ -318,7 +318,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px;
+  padding: 10px 220px;
   z-index: 1;
 }
 
@@ -702,7 +702,15 @@ body {
 
 /* Phần Câu Hỏi Thường Gặp */
 .faq-section {
-  padding: 20px;
+  padding: 20px 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.fqa-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .faq-container {
@@ -764,6 +772,262 @@ body {
 
 .btn-view-more-questions:hover {
   background-color: #cdc828;
+}
+
+/* Phần Feedback Khách Hàng */
+.feedback-section {
+  padding: 50px 220px;
+  text-align: center;
+}
+
+.feedback-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.feedback-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feedback-wrapper {
+  left: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 80%; /* Điều chỉnh độ rộng của phần carousel */
+}
+
+.feedback-item {
+  min-width: 25%; /* Mỗi feedback chiếm 25% chiều rộng (4 feedback cùng lúc) */
+  box-sizing: border-box;
+  padding: 0 10px; /* Khoảng cách giữa các feedback */
+  transition: transform 0.3s ease;
+}
+
+.feedback-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-wrapper {
+  overflow: hidden;
+  width: 80%; /* Điều chỉnh độ rộng của phần carousel */
+  transition: transform 0.7s ease-in-out; /* Thêm hiệu ứng chuyển động mượt mà */
+}
+
+.feedback-item {
+  min-width: 25%; /* Mỗi feedback chiếm 25% chiều rộng (hiển thị 4 feedback cùng lúc) */
+  box-sizing: border-box;
+  padding:  0 10px; /* Khoảng cách giữa các feedback */
+}
+
+/* Nút điều khiển carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 100;
+  background-color: #575757;
+}
+
+.carousel-control-prev {
+  left: 0px;
+}
+
+.carousel-control-next {
+  right: 0px;
+}
+
+/* Phần Cảm nhận của khách hàng */
+.testimonial-section {
+  padding: 50px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.testimonial-subtitle {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-item {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  position: relative;
+  color: #fff;
+}
+
+.testimonial-content {
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.testimonial-author-image {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* Phần Footer */
+.footer-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3, .footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li i {
+  margin-right: 10px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #007bff;
+}
+
+/* Định dạng phần Giờ làm việc */
+.working-hours-box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.working-hours-icon {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.working-hours-icon i {
+  font-size: 40px;
+  color: #ffc107;
+}
+
+.working-hours-box h4 {
+  margin-bottom: 10px;
+}
+
+.working-hours-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.working-hours-box ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* Nút quay lại đầu trang */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #b0b4c2;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  visibility: hidden; /* Ẩn nút khi trang chưa cuộn */
+  opacity: 0;
+  margin-bottom: 50px;
+}
+
+.back-to-top:hover {
+  background-color: #868aa3;
+}
+
+.back-to-top i {
+  font-size: 24px;
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Social Icons Fixed */
