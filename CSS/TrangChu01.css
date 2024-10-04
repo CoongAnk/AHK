@@ -166,7 +166,7 @@ body {
 /* Main Banner (Carousel) */
 .carousel {
   position: relative;
-  width: 100vw; /* Full width of the viewport */
+  width: 100%; /* Full width of the viewport */
   height: 450px; /* Chiều cao có thể tùy chỉnh */
   overflow: hidden;
 }
