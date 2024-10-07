@@ -167,7 +167,7 @@ body {
 .carousel {
   position: relative;
   width: 100%; /* Full width of the viewport */
-  height: 450px; /* Chiều cao có thể tùy chỉnh */
+  height: auto; /* Chiều cao có thể tùy chỉnh */
   overflow: hidden;
 }
 
