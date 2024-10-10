@@ -41,24 +41,80 @@ body {
 }
 
 
-/* Header Thông Tin */
-.header-info {
+/* Phần Header Thông Tin */
+.info-header {
   background-color: #f8f9fa;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  font-size: 14px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
 }
 
-.header-info .info-block {
+.info-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-header-item {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.info-header-item.logo {
+  flex: 1;
   display: flex;
   align-items: center;
 }
 
-.header-info .icon-text {
-  margin-right: 5px;
-  color: #ff4500;
+.info-header-item.logo img {
+  width: 60px;
+  margin-right: 10px;
 }
+
+.info-header-item h2 {
+  font-size: 22px;
+  font-family: Georgia;
+  color: #333;
+}
+
+.info-header-item i {
+  font-size: 28px;
+  color: #d9534f;
+  margin-right: 10px;
+}
+
+.info-details h4 {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+.info-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-details strong {
+  color: #d9534f;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .info-header-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .info-header-item {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
 
 /* Định dạng chung cho menu điều hướng */
 .navbar {
@@ -130,10 +186,6 @@ body {
 
 .dropdown:hover .dropdown-menu {
   display: block; /* Hiển thị menu thả xuống khi hover vào mục "Dịch vụ" */
-}
-
-.navbar-brand img {
-  height: 50px;
 }
 
 /* Search form */
@@ -704,7 +756,7 @@ body {
 .faq-section {
   padding: 20px 50px;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
 .fqa-title {
@@ -1060,6 +1112,28 @@ body {
 .social-icons-fixed a:hover {
   transform: scale(1.1); /* Phóng to khi hover */
 }
+
+.icon-phone {
+    animation: shake-rotate 1s infinite; /* Hiệu ứng kéo dài 1 giây và chạy vô hạn */
+    transform-origin: center; /* Điểm quay là trung tâm */
+}
+
+@keyframes shake-rotate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(30deg); }
+    20% { transform: rotate(-30deg); }
+    30% { transform: rotate(30deg); }
+    40% { transform: rotate(-30deg); }
+    50% { transform: rotate(25deg); }
+    60% { transform: rotate(-25deg); }
+    70% { transform: rotate(20deg); }
+    80% { transform: rotate(-20deg); }
+    90% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+
 
 /* Footer */
 .footer {
