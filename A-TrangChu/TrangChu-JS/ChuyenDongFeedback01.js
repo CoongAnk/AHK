@@ -1,24 +1,33 @@
-let currentSlide = 0;
-const feedbackItems = document.querySelectorAll('.feedback-item');
-const totalSlides = feedbackItems.length;
-
-function showSlide(index) {
-    const wrapper = document.querySelector('.feedback-wrapper');
-    const slideWidth = wrapper.clientWidth / 3;  // Chiều rộng của mỗi feedback (hiển thị 3 cùng lúc)
-
-    // Chuyển động các feedback
-    wrapper.style.transform = `translateX(${-index * slideWidth}px)`;
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;  // Tăng chỉ số slide hiện tại và lặp lại từ đầu nếu quá giới hạn
-    showSlide(currentSlide);
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;  // Giảm chỉ số slide hiện tại và lặp lại từ cuối nếu quá giới hạn
-    showSlide(currentSlide);
-}
-
-// Hiển thị slide đầu tiên khi trang web tải xong
-showSlide(currentSlide);
+$(document).ready(function(){
+    $('.feedback-carousel').slick({
+        slidesToShow: 4,  // Hiển thị 4 slide cùng một lúc
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+});

@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
     <title>Garage AHK</title>
     <!-- Boxicons for icons -->
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
@@ -301,115 +306,104 @@
         </div>
     </section>
 
-    <!-- Câu hỏi thường gặp với dropdown chia thành 2 cột -->
-    <section class="faq-section">
-        <h2 class="fqa-title">Câu hỏi thường gặp</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <button class="faq-question">Tôi có thể đặt lịch bảo dưỡng ô tô tại Garage Quang Đức như thế nào</button>
-                <div class="faq-answer">
-                    <ol>
-                        <li>Thông qua số hot-line: 0962677726</li>
-                        <li>Thông qua website (link đặt lịch)</li>
-                        <li>Thông qua Facebook page: https://www.facebook.com/quangduc.com.vn/</li>
-                    </ol>
+<!-- Phần Câu hỏi thường gặp -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Câu hỏi thường gặp</h2>
+            <p>Tổng hợp những câu hỏi thường gặp nhất dành cho khách hàng</p>
+        </div>
+        <div class="faq-columns">
+            <div class="faq-column">
+                <div class="faq-item">
+                    <button class="faq-question">Tôi có thể đặt lịch bảo dưỡng ô tô tại Garage Quang Đức như thế nào</button>
+                    <div class="faq-answer">
+                        <ol>
+                            <li>Thông qua số hotline: <strong>0913 518 953</strong></li>
+                            <li>Thông qua website (link đặt lịch)</li>
+                            <li>Thông qua Facebook page: <a href="https://www.facebook.com/garaphuchoan">https://www.facebook.com/garaphuchoan</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Garage Quang Đức có cung cấp dịch vụ bảo dưỡng tận nơi không?</button>
+                    <div class="faq-answer">
+                        <p>Hiện tại gara chưa cung cấp</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Các hình thức thanh toán khi sử dụng dịch vụ của Garage Quang Đức</button>
+                    <div class="faq-answer">
+                        <ol>
+                            <li>Tiền mặt</li>
+                            <li>Thẻ</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Garage Quang Đức có cung cấp dịch vụ bảo dưỡng tận nơi không ?</button>
-                <div class="faq-answer">
-                    <p>Hiện tại gara chưa cung cấp</p>
+            <div class="faq-column">
+                <div class="faq-item">
+                    <button class="faq-question">Tôi cần làm gì nếu xe gặp sự cố giữa đường?</button>
+                    <div class="faq-answer">
+                        <p>Gọi ngay cho số hot-line: <strong>0913 518 953</strong> </p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Các hình thức thanh toán khi sử dụng dịch vụ của Garage Quang Đức</button>
-                <div class="faq-answer">
-                    <ol>
-                        <li>Tiền mặt</li>
-                        <li>Thẻ</li>
-                    </ol>
+                <div class="faq-item">
+                    <button class="faq-question">Sẽ cần bao nhiêu thời gian cho việc sửa chữa và bảo dưỡng ?</button>
+                    <div class="faq-answer">
+                        <ol>
+                            <li>Cấp độ bảo dưỡng nhanh: 30 phút</li>
+                            <li>Cấp độ bảo dưỡng &lt;2.000km: 2 tiếng</li>
+                            <li>Cấp độ bảo dưỡng &lt;2.000km: 8 tiếng</li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Tôi cần làm gì nếu xe gặp sự cố giữa đường ?</button>
-                <div class="faq-answer">
-                    <p>Gọi ngay cho số hot-line: 0913 518 953</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Sẽ cần bao nhiêu thời gian cho việc sửa chữa và bảo dưỡng ?</button>
-                <div class="faq-answer">
-                    <ol>
-                        <li>Cấp độ bảo dưỡng nhanh: 30 phút</li>
-                        <li>Cấp độ bảo dưỡng &lt;2.000km: 2 tiếng</li>
-                        <li>Cấp độ bảo dưỡng &lt;8.000km: 4 tiếng</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Tôi cần chuẩn bị trước những gì trước khi mang xe đến với Garage</button>
-                <div class="faq-answer">
-                    <ol>
-                        <li>Nếu xe làm bảo hiểm: bảo hiểm bắt buộc, bảo hiểm tự nguyện, đăng ký xe, đăng kiểm xe, bằng lái xe, chứng minh thư lái xe, chứng minh thư chủ xe</li>
-                        <li>Nếu xe làm không bảo hiểm: không cần giấy tờ gì</li>
-                    </ol>
+                <div class="faq-item">
+                    <button class="faq-question">Tôi cần làm gì nếu xe gặp sự cố giữa đường?</button>
+                    <div class="faq-answer">
+                        <ol>
+                            <li><strong>Nếu xe làm bảo hiểm:</strong> bảo hiểm bắt buộc, bảo hiểm tự nguyện, đăng ký xe, đăng kiểm xe, bằng lái xe, chứng minh thư lái xe, chứng minh thư chủ xe</li>
+                            <li><strong>Nếu xe làm không bảo hiểm:</strong> không cần giấy tờ gì</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="view-more-questions"></div>
-            <a href="#" class="btn btn-view-more-questions">Xem thêm</a>
-        </div>
-    </section>
+    </div>
+    <div class="more-button">
+        <button>Xem thêm</button>
+    </div>
+</section>
 
-    <!-- Phần Feedback Khách Hàng -->
-    <section class="feedback-section">
-        <h2 class="feedback-title">Feedback khách hàng đã sử dụng dịch vụ tại Garage Quang Đức</h2>
-        <div class="feedback-carousel">
-            <!-- Nút điều khiển bên trái -->
-            <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
-
-            <!-- Feedback container -->
-            <div class="feedback-wrapper">
-                <!-- Feedback 1 -->
-                <div class="feedback-item">
-                    <img src="/images/01.jpg" alt="Feedback 1">
+        <!-- Phần Feedback khách hàng -->
+        <section class="customer-feedback">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Feedback khách hàng đã sử dụng dịch vụ tại Garage Quang Đức</h2>
                 </div>
-
-                <!-- Feedback 2 -->
-                <div class="feedback-item">
-                    <img src="/images/02.jpg" alt="Feedback 2">
-                </div>
-
-                <!-- Feedback 3 -->
-                <div class="feedback-item">
-                    <img src="/images/03.jpg" alt="Feedback 3">
-                </div>
-
-                <!-- Feedback 4 -->
-                <div class="feedback-item">
-                    <img src="/images/04.jpg" alt="Feedback 4">
-                </div>
-
-                <!-- Feedback 5 -->
-                <div class="feedback-item">
-                    <img src="/images/05.jpg" alt="Feedback 5">
-                </div>
-
-                <!-- Feedback 6 -->
-                <div class="feedback-item">
-                    <img src="/images/06.jpg" alt="Feedback 6">
+                <div class="feedback-carousel">
+                    <div class="feedback-item">
+                        <img src="/images/01.jpg" alt="Feedback từ khách hàng Việt">
+                    </div>
+                    <div class="feedback-item">
+                        <img src="/images/02.jpg" alt="Feedback từ khách hàng Hồ">
+                    </div>
+                    <div class="feedback-item">
+                        <img src="/images/03.jpg" alt="Feedback từ khách hàng Thu">
+                    </div>
+                    <div class="feedback-item">
+                        <img src="/images/04.jpg" alt="Feedback từ khách hàng Hoài">
+                    </div>
+                    <div class="feedback-item">
+                        <img src="/images/05.jpg" alt="Feedback từ khách hàng Hưng">
+                    </div>
+                    <div class="feedback-item">
+                        <img src="/images/06.jpg" alt="Feedback từ khách hàng Khôi">
+                    </div>
                 </div>
             </div>
-
-            <!-- Nút điều khiển bên phải -->
-            <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
-        </div>
-    </section>
+        </section>
+    
 
     <!-- Phần Cảm nhận của khách hàng -->
     <section class="testimonial-section">
@@ -452,6 +446,11 @@
                     <li><i class='bx bxs-home'></i> https://www.facebook.com/garaphuchoan</li>
                     <li><i class='bx bxs-phone'></i> Hotline: 0913 518 953</li>
                     <li><i class='bx bxs-envelope'></i> Email: garaphuchoan@gmail.com</li>
+                    <a href="//www.dmca.com/Protection/Status.aspx?ID=52b584c4-d79c-4d9e-b37c-4b8f5771e4c1" title="DMCA.com Protection Status" class="dmca-badge"> 
+                        <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=52b584c4-d79c-4d9e-b37c-4b8f5771e4c1"  alt="DMCA.com Protection Status" />
+                    </a>  
+                    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+
                 </ul>
             </div>
 
@@ -460,10 +459,10 @@
                 <h4>Thông tin công ty</h4>
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="/B-GioiThieu/GioiThieu01.html">Giới thiệu</a></li>
+                    <li><a href="/C-DichVu/01-BaoTri/BaoTri.html">Dịch vụ</a></li>
                     <li><a href="#">Tin tức</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="/E-LienHe/LienHe01.html">Liên hệ</a></li>
                 </ul>
             </div>
 
@@ -471,9 +470,9 @@
             <div class="footer-column services-info">
                 <h4>Dịch vụ</h4>
                 <ul>
-                    <li><a href="#">Bảo trì, bảo dưỡng</a></li>
+                    <li><a href="/C-DichVu/01-BaoTri/BaoTri.html">Bảo trì, bảo dưỡng</a></li>
                     <li><a href="#">Dịch vụ sơn lazang ô tô</a></li>
-                    <li><a href="#">Phục hồi xe tai nạn - Va chạm</a></li>
+                    <li><a href="/C-DichVu/03-PhucHoi/PhucHoi.html">Phục hồi xe tai nạn - Va chạm</a></li>
                     <li><a href="#">Dịch vụ gầm máy</a></li>
                     <li><a href="#">Cứu hộ giao thông</a></li>
                     <li><a href="#">Tư vấn bảo hiểm Thân vỏ - TNDS</a></li>
@@ -520,11 +519,43 @@
         <a href="https://maps.app.goo.gl/kk4zgrAmjhvnoJTW9" class="social-icon maps"><img src="/images/Logo Map.jpg" alt="Google Maps"></a>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
     <script src="TrangChu-JS/ChuyenDongBanner01.js"></script>
     <script src="TrangChu-JS/ChuyenDongDichVu01.js"></script>
     <script src="TrangChu-JS/CauHoiThuongGap01.js"></script>
     <script src="TrangChu-JS/ChuyenDongFeedback01.js"></script>
     <script src="TrangChu-JS/QuayLaiDauTrang01.js"></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqQuestions = document.querySelectorAll(".faq-question");
+    
+            faqQuestions.forEach(question => {
+                question.addEventListener("click", function () {
+                    // Đóng tất cả các câu trả lời khác trước khi mở câu hỏi mới
+                    faqQuestions.forEach(q => {
+                        if (q !== question) {
+                            q.classList.remove("active");
+                            q.nextElementSibling.style.display = "none";
+                        }
+                    });
+    
+                    // Chuyển đổi trạng thái hiển thị của câu hỏi hiện tại
+                    this.classList.toggle("active");
+                    const answer = this.nextElementSibling;
+    
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                    } else {
+                        answer.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+    
 </body>
 </html>

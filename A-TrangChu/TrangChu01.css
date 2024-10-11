@@ -115,7 +115,6 @@ body {
   }
 }
 
-
 /* Định dạng chung cho menu điều hướng */
 .navbar {
   background-color: #333;
@@ -754,159 +753,199 @@ body {
 
 /* Phần Câu Hỏi Thường Gặp */
 .faq-section {
-  padding: 20px 50px;
-  justify-content: center;
-  text-align: left;
+  padding: 50px 20px;
+  background-color: #ffffff;
 }
 
-.fqa-title {
-  font-size: 24px;
-  font-weight: bold;
+.section-title h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
   margin-bottom: 30px;
 }
 
-.faq-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Phần Câu hỏi thường gặp */
+.faq-section {
+  padding: 50px 100px;
+  background-color: #ffffff;
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.faq-columns {
+  display: flex;
+  justify-content: space-between;
   gap: 20px;
-  
+}
+
+.faq-column {
+  flex: 1;
 }
 
 .faq-item {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(208, 208, 208, 0.1);
-  overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .faq-question {
   width: 100%;
-  text-align: left;
   padding: 15px;
+  text-align: left;
+  background-color: #000;
+  color: #fff;
   font-size: 16px;
-  font-weight: bold;
-  background-color: #dbdbdb;
   border: none;
-  cursor: pointer;
   outline: none;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
 }
 
 .faq-question:hover {
-  background-color: #ddd;
+  background-color: #444;
 }
 
 .faq-answer {
   display: none;
-  background-color: #f9f9f9;
-  padding: 15px;
-  margin-top: -10px;
-  margin-left: 10px;
-}
-
-.faq-answer p, .faq-answer ol {
-  font-size: 14px;
-  color: #555;
-  margin: 0;
-}
-
-.view-more-questions {
-  margin-top: 30px;
-}
-
-.btn-view-more-questions {
-  background-color: #e3df22;
-  color: #fff;
-  padding: 10px 20px;
+  padding: 15px 30px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
   border-radius: 5px;
+}
+
+.faq-answer a {
+  color: #007bff;
   text-decoration: none;
 }
 
-.btn-view-more-questions:hover {
-  background-color: #cdc828;
+.faq-answer a:hover {
+  text-decoration: underline;
+}
+
+.more-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.more-button button {
+  background-color: #fbc02d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.more-button button:hover {
+  background-color: #e6a800;
 }
 
 /* Phần Feedback Khách Hàng */
-.feedback-section {
-  padding: 50px 220px;
+.customer-feedback {
+  padding: 50px 100px;
+  background-color: #ffffff;
   text-align: center;
 }
 
-.feedback-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
+.section-title h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
 }
 
 .feedback-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  overflow: hidden;
-}
-
-.feedback-wrapper {
-  left: 50px;
-  right: 50px;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 auto;
-  width: 80%; /* Điều chỉnh độ rộng của phần carousel */
 }
 
 .feedback-item {
-  min-width: 25%; /* Mỗi feedback chiếm 25% chiều rộng (4 feedback cùng lúc) */
-  box-sizing: border-box;
-  padding: 0 10px; /* Khoảng cách giữa các feedback */
-  transition: transform 0.3s ease;
+  padding: 100px;
 }
 
 .feedback-item img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
-.feedback-wrapper {
-  overflow: hidden;
-  width: 80%; /* Điều chỉnh độ rộng của phần carousel */
-  transition: transform 0.7s ease-in-out; /* Thêm hiệu ứng chuyển động mượt mà */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.feedback-item {
-  min-width: 25%; /* Mỗi feedback chiếm 25% chiều rộng (hiển thị 4 feedback cùng lúc) */
-  box-sizing: border-box;
-  padding:  0 10px; /* Khoảng cách giữa các feedback */
+.slick-prev {
+    left: -60px;
 }
 
-/* Nút điều khiển carousel */
-.carousel-control-prev,
-.carousel-control-next {
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px;
-  z-index: 100;
-  background-color: #575757;
+.slick-next {
+    right: -60px;
 }
 
-.carousel-control-prev {
-  left: 0px;
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-control-next {
-  right: 0px;
+.slick-prev:active,
+.slick-next:active {
+    color: #000; /* Đổi màu biểu tượng thành màu đen khi nhấn */
+    transform: translateY(-50%) scale(0.95); /* Nhấn vào thu nhỏ nhẹ để cảm giác có sự phản hồi */
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+    outline: none;
+}
+
+.slick-prev svg,
+.slick-next svg {
+    width: 24px;
+    height: 24px;
+    transition: stroke 0.3s ease;
+}
+
+.slick-prev:active svg,
+.slick-next:active svg {
+    stroke: #000; /* Đổi màu biểu tượng thành màu đen khi nhấn */
 }
 
 /* Phần Cảm nhận của khách hàng */
 .testimonial-section {
   padding: 50px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/02.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
