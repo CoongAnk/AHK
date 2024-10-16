@@ -1,0 +1,507 @@
+/* Reset CSS để xóa các margin/padding mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cài đặt chiều cao toàn màn hình và font chữ mặc định */
+body, html {
+  height: 100%; /* Chiều cao 100% màn hình */
+  font-family: Arial, sans-serif; /* Font chữ mặc định */
+}
+
+/* Sidebar (Thanh điều hướng bên trái) */
+.sidebar {
+  position: fixed; /* Giữ sidebar cố định */
+  left: 0;
+  top: 0;
+  width: 80px; /* Chiều rộng sidebar */
+  height: 100%; /* Chiều cao toàn màn hình */
+  background-color: #fff; /* Màu nền trắng */
+  display: flex;
+  flex-direction: column; /* Căn các phần tử theo cột */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  padding-top: 20px; /* Khoảng cách trên cùng cho logo */
+}
+
+/* Logo nằm ở đầu */
+.logo {
+  width: 50px; /* Kích thước logo */
+  margin-bottom: 20px; /* Khoảng cách bên dưới logo */
+}
+
+/* Container giữ biểu tượng menu nằm giữa theo chiều dọc */
+.menu-container {
+  flex-grow: 1; /* Đẩy phần menu vào giữa bằng cách chiếm không gian còn lại */
+  display: flex;
+  align-items: center; /* Căn giữa menu theo chiều ngang */
+  justify-content: center; /* Căn giữa menu theo chiều dọc */
+}
+
+/* Định dạng biểu tượng menu */
+.menu-icon {
+  font-size: 24px; /* Kích thước biểu tượng */
+  cursor: pointer; /* Con trỏ dạng tay khi hover */
+}
+
+/* Hero section (Phần hình nền lớn) */
+.hero {
+  position: relative; /* Giữ các phần tử bên trong theo vị trí tương đối */
+  height: 100vh; /* Chiều cao chiếm toàn màn hình */
+  width: 100%; /* Chiều rộng 100% màn hình */
+  overflow: hidden; /* Ẩn phần nội dung thừa */
+}
+
+/* Ảnh nền */
+.background {
+  width: 100%; /* Chiều rộng 100% của màn hình */
+  height: 100%; /* Chiều cao 100% của màn hình */
+  object-fit: cover; /* Giữ tỷ lệ ảnh và lấp đầy khung hình */
+  position: absolute; /* Vị trí tuyệt đối để nằm dưới phần văn bản */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Đẩy ảnh xuống dưới văn bản */
+}
+
+/* Văn bản trên hình nền */
+.hero-text {
+  position: absolute; /* Vị trí tuyệt đối để đặt chính giữa màn hình */
+  top: 50%; /* Căn giữa theo chiều dọc */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Điều chỉnh để văn bản chính xác ở giữa */
+  text-align: center; /* Căn giữa văn bản */
+  color: white; /* Màu chữ trắng */
+}
+
+/* Tiêu đề chính */
+.hero-text h1 {
+  font-size: 48px; /* Kích thước lớn cho tiêu đề */
+  font-weight: bold; /* Đậm chữ */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  text-align: left;
+}
+
+/* CSS cho nút "Cuộn xuống" */
+.scroll-down {
+  color: white; /* Màu chữ trắng */
+  text-decoration: none; /* Bỏ gạch chân */
+  font-size: 18px; /* Kích thước chữ */
+  margin-top: 450px; /* Khoảng cách trên */
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Xếp chữ và mũi tên theo cột */
+  align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+/* CSS cho mũi tên xuống */
+.arrow-down {
+  color: white; /* Màu chữ trắng */
+  text-decoration: none; /* Bỏ gạch chân */
+  font-size: 18px; /* Kích thước chữ */
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Xếp chữ và mũi tên theo cột */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  font-size: 24px; /* Kích thước mũi tên */
+  margin-top: 5px; /* Khoảng cách giữa chữ và mũi tên */
+  animation: bounce 1.5s infinite; /* Hiệu ứng nhấp nháy */
+}
+
+/* Hiệu ứng mũi tên nhấp nháy */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+/* CSS cho cuộn mượt */
+html {
+  scroll-behavior: smooth; /* Tạo hiệu ứng cuộn mượt */
+}
+
+/* Phần Tin tức Sự kiện */
+.news-section {
+  padding: 50px; /* Khoảng cách trên dưới của phần tin tức */
+  text-align: center; /* Căn giữa nội dung tiêu đề và nút Xem tất cả */
+  background-color: #f9f9f9; /* Màu nền sáng cho phần này */
+}
+
+/* Tiêu đề của phần tin tức */
+.news-title {
+  margin-left: 50px;
+  font-size: 32px; /* Kích thước chữ tiêu đề */
+  margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+  font-weight: 500; /* Độ đậm vừa phải */
+  text-align: left;
+}
+
+/* Container chứa các bài viết, dùng Flexbox để xếp hàng ngang */
+.news-container {
+  margin-left: 50px;
+  display: flex; /* Sử dụng Flexbox để các bài viết nằm ngang */
+  justify-content: space-between; /* Giãn đều khoảng cách giữa các bài viết */
+  gap: 20px; /* Khoảng cách giữa các bài viết */
+  margin-bottom: 20px; /* Khoảng cách dưới cùng của container */
+}
+
+/* Đặt thẻ <a> như một container cho bài viết */
+.news-item {
+  width: 30%; /* Mỗi bài viết chiếm 30% chiều rộng */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; /* Bỏ gạch chân liên kết */
+  color: inherit; /* Giữ nguyên màu chữ */
+  transition: transform 0.3s; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng khi hover vào bài viết */
+.news-item:hover {
+  transform: scale(1.02); /* Phóng to nhẹ khi hover */
+}
+
+/* Wrapper cho hình ảnh để giữ ảnh trong khung */
+.image-wrapper {
+  width: 100%; 
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hình ảnh trong bài viết */
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Phóng to ảnh khi hover */
+.news-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Tiêu đề của mỗi bài viết */
+.news-item h3 {
+  padding: 15px; /* Khoảng cách trong nội dung */
+  font-size: 18px; /* Kích thước chữ tiêu đề bài viết */
+  line-height: 1.4; /* Dòng cách giữa các dòng chữ */
+}
+
+/* Ngày đăng của mỗi bài viết */
+.news-item p {
+  padding: 0 15px 15px; /* Khoảng cách trong cùng với lề trên và dưới */
+  color: #777; /* Màu chữ xám nhẹ */
+  font-size: 14px; /* Kích thước chữ nhỏ cho ngày đăng */
+}
+
+/* Định dạng nút "Xem tất cả" */
+.view-all {
+  display: inline-flex; /* Để biểu tượng mũi tên và văn bản căn theo hàng ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  font-size: 18px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+  text-decoration: none; /* Bỏ gạch chân */
+  color: #333; /* Màu chữ mặc định */
+  transition: color 0.3s ease-in-out; /* Hiệu ứng chuyển màu mượt */
+}
+
+/* Mũi tên bên phải */
+.view-all::after {
+  content: ' ➝'; /* Ký tự mũi tên */
+  margin-left: 5px; /* Khoảng cách giữa chữ và mũi tên */
+  transition: margin-left 0.3s ease-in-out; /* Hiệu ứng di chuyển nhẹ */
+}
+
+/* Hiệu ứng khi hover vào nút */
+.view-all:hover {
+  color: #3567e5; /* Chuyển sang màu đỏ */
+}
+
+.view-all:hover::after {
+  margin-left: 10px; /* Mũi tên di chuyển nhẹ sang phải khi hover */
+}
+
+/* Section chứa các lĩnh vực */
+.fields-section {
+  display: flex;
+  padding: 50px;
+  background-color: #f8f8f8;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nội dung văn bản ở bên trái */
+.field-content {
+  padding: 100px;
+  max-width: 45%;
+}
+
+.field-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.field-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.explore-icon span {
+  font-size: 16px;
+  color: #888;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Container của các thẻ */
+.field-cards {
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa các thẻ */
+}
+
+/* Thẻ cơ bản */
+.field-card {
+  width: 300px; /* Chiều rộng cố định của mỗi thẻ */
+  background-color: #fff; /* Màu nền ban đầu */
+  border-radius: 8px; /* Bo góc mềm mại */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+  overflow: hidden; /* Ngăn nội dung vượt ra ngoài viền */
+  transition: background-color 0.3s ease-in-out; /* Hiệu ứng chuyển màu mượt */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+/* Hình ảnh trên thẻ */
+.field-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Tiêu đề trên thẻ */
+.field-card h3 {
+  font-size: 22px;
+  color: #333; /* Màu chữ ban đầu */
+  transition: color 0.3s ease-in-out; /* Hiệu ứng chuyển màu chữ mượt */
+}
+
+/* Nút xem thêm bên dưới thẻ */
+.field-card .view-more {
+  margin-top: auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hiệu ứng khi hover vào thẻ */
+.field-card:hover {
+  background-color: #e53935; /* Chuyển nền sang màu đỏ */
+}
+
+/* Khi hover vào thẻ, đổi màu chữ */
+.field-card:hover h3 {
+  color: white; /* Chuyển chữ sang trắng */
+}
+
+/* Khi hover, đổi màu nút Xem thêm */
+.field-card:hover .view-more {
+  color: white; /* Chuyển chữ sang trắng */
+}
+
+/* Phần Câu hỏi thường gặp */
+.faq-section {
+  padding: 50px 100px;
+  background-color: #ffffff;
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.faq-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.faq-column {
+  flex: 1;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.faq-question:hover {
+  background-color: #444;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px 30px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 5px;
+}
+
+.faq-answer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
+}
+
+.more-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.more-button button {
+  background-color: #fbc02d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.more-button button:hover {
+  background-color: #e6a800;
+}
+
+/* Phần Footer */
+.footer-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  padding: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3, .footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li i {
+  margin-right: 10px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #007bff;
+}
+
+/* Định dạng phần Giờ làm việc */
+.working-hours-box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.working-hours-icon {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.working-hours-icon i {
+  font-size: 40px;
+  color: #ffc107;
+}
+
+.working-hours-box h4 {
+  margin-bottom: 10px;
+}
+
+.working-hours-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.working-hours-box ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
