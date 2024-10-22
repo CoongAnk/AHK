@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"> <!-- Khai báo mã hóa ký tự UTF-8 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Đảm bảo trang web hiển thị tốt trên thiết bị di động -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
   <title>Trang Chủ</title> <!-- Tiêu đề trang web -->
   <link rel="stylesheet" href="TrangChu02.css"> <!-- Liên kết tệp CSS -->
 </head>
@@ -12,17 +13,33 @@
     <!-- Logo ở đầu -->
     <img src="/icons/Logo.jpg" alt="Logo" class="logo">
   
-    <!-- Menu nằm giữa -->
-    <div class="menu-container">
-      <div class="menu-icon">&#9776;</div> <!-- Biểu tượng menu -->
-    </div>
+<!-- Nút Menu -->
+<div class="menu-container">
+  <div class="menu-icon">&#9776;</div> <!-- Biểu tượng menu -->
+</div>
+
+<!-- Sidebar Menu -->
+<div id="side-menu" class="side-menu">
+  <button id="close-button" class="close-button">✕</button>
+  <ul class="menu-items">
+    <li><a href="#" class="active">Trang Chủ</a></li>
+    <li><a href="#">Giới Thiệu Tập Đoàn</a></li>
+    <li><a href="#">Lĩnh Vực Hoạt Động</a></li>
+    <li><a href="#">Phát Triển Bền Vững</a></li>
+    <li><a href="#">Quan Hệ Cổ Đông</a></li>
+    <li><a href="#">Tin Tức Sự Kiện</a></li>
+    <li><a href="#">Tuyển Dụng</a></li>
+    <li><a href="#">Liên Hệ</a></li>
+  </ul>
+</div>
+
   </div>
   
 
   <!-- Phần hình nền lớn (Hero section) -->
   <div class="hero">
     <!-- Ảnh nền toàn màn hình -->
-    <img src="/images/16.jpeg" alt="Hình nền" class="background">
+    <img src="/images/09.jpg" alt="Hình nền" class="background">
 
     <!-- Phần văn bản hiển thị trên hình nền -->
     <div class="hero-text">
@@ -72,33 +89,52 @@
 
 <section class="fields-section">
   <div class="field-content">
-    <h2>Lĩnh vực tiên phong</h2>
+    <h2>Lĩnh Vực <span class="highlight">Tiên Phong</span></h2>
     <p>
       Với mong muốn đem đến cho thị trường những sản phẩm - dịch vụ theo tiêu chuẩn quốc tế 
       và những trải nghiệm hoàn toàn mới về phong cách sống hiện đại, ở bất cứ lĩnh vực nào 
       Vingroup cũng chứng tỏ vai trò tiên phong, dẫn dắt sự thay đổi xu hướng tiêu dùng.
     </p>
-    <div class="explore-icon">
-      <span>← Trượt để khám phá →</span>
-    </div>
   </div>
 
-  <div class="field-cards">
-    <!-- Thẻ Công Nghệ -->
+  <div class="card-container">
     <div class="field-card">
       <img src="/images/01.jpg" alt="Công Nghệ">
       <h3>Công Nghệ - Công Nghiệp</h3>
       <a href="#" class="view-more">Xem thêm ➝</a>
     </div>
 
-    <!-- Thẻ Thương Mại -->
     <div class="field-card">
-      <img src="/images/02.jpg" alt="Thương mại Dịch vụ">
+      <img src="/images/02.jpg" alt="Thương Mại">
       <h3>Thương Mại - Dịch Vụ</h3>
+      <img src="/images/Banner00.jpg" alt="Thương mại dịch vụ" class="service-img">
+      <a href="#" class="view-more">Xem thêm ➝</a>
+    </div>
+
+    <div class="field-card">
+      <img src="/images/03.jpg" alt="Thiện Nguyện">
+      <h3>Thiện Nguyện - Xã Hội</h3>
       <a href="#" class="view-more">Xem thêm ➝</a>
     </div>
   </div>
 </section>
+
+
+<!-- Giới thiệu về Trung Tâm Ô Tô AHK -->
+<section class="about-section">
+  <div class="about-content">
+      <div class="about-text">
+          <h2>Về Trung Tâm Ô To AHK</h2>
+          <p>Mô tả ...</p>
+          <a href="#" class="btn about-btn">Xem thêm</a>
+      </div>
+      <div class="about-video">
+          <!-- Giả sử đây là một video, bạn có thể thay bằng hình ảnh nếu cần -->
+          <iframe width="560" height="315" src="https://www.youtube.com/watch?v=-60sYyKXkew" title="Giới thiệu về Garage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </div>
+</section>
+
 
 <!-- Phần Câu hỏi thường gặp -->
 <section class="faq-section">
@@ -239,6 +275,8 @@
 
   <!-- Liên kết đến tệp script.js -->
   <script src="TrangChu-JS/NutCuonXuong02.js"></script>
+  <script src="TrangChu-JS/CuonDichVu02.js"></script>
+  <script src="TrangChu-JS/NutMenu02.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {

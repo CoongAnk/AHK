@@ -1,0 +1,221 @@
+/* Section tổng quan chứa văn bản và các thẻ */
+.fields-section {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Áp dụng phông chữ và màu sắc toàn trang */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f8f8; /* Nền sáng */
+  margin: 0;
+  padding: 0;
+}
+
+/* Tiêu đề chính */
+.field-content h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700; /* Chữ đậm */
+  font-size: 36px;
+  color: #333; /* Màu xám đậm */
+  margin-bottom: 20px;
+}
+
+/* Từ nổi bật trong tiêu đề */
+.highlight {
+  color: #e53935; /* Màu đỏ nổi bật */
+}
+
+/* Đoạn văn mô tả */
+.field-content p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Chữ mỏng */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666; /* Màu xám nhạt */
+  margin-bottom: 30px;
+}
+
+/* Container các thẻ dịch vụ */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 55%; /* Đặt chiều rộng container thẻ */
+  gap: 20px; /* Khoảng cách giữa các thẻ */
+}
+
+/* Mỗi thẻ dịch vụ */
+.field-card {
+  flex: 1; /* Chia đều kích thước giữa các thẻ */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tiêu đề trong thẻ */
+.field-card h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #333; /* Màu xám đậm */
+  transition: color 0.3s;
+}
+
+/* Hiệu ứng khi hover vào thẻ */
+.field-card:hover {
+  background-color: #e53935; /* Nền đỏ khi hover */
+}
+
+.field-card:hover h3 {
+  color: white; /* Chuyển chữ sang trắng khi hover */
+}
+
+/* Nút "Xem thêm" - Ẩn ban đầu */
+.view-more {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Hiện nút khi hover */
+.field-card:hover .view-more {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nội dung văn bản bên trái */
+.field-content {
+  padding: 0 100px;
+  max-width: 45%;
+  z-index: 1;
+}
+
+/* Container cho các thẻ dịch vụ, sử dụng flexbox */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* Căn đều các thẻ */
+  align-items: stretch; /* Căn chỉnh thẻ theo chiều cao */
+  width: 55%; /* Đặt độ rộng container thẻ */
+  gap: 20px; /* Khoảng cách giữa các thẻ */
+}
+
+/* Thẻ dịch vụ */
+.field-card {
+  flex: 1; /* Các thẻ có cùng kích thước và chia đều */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tiêu đề trong thẻ */
+.field-card h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+/* Hiệu ứng khi hover vào thẻ */
+.field-card:hover {
+  background-color: #e53935;
+}
+
+.field-card:hover h3 {
+  color: white;
+}
+
+/* Nút "Xem thêm" - Ẩn ban đầu */
+.view-more {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Hiện nút khi hover */
+.field-card:hover .view-more {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Thẻ dịch vụ */
+.field-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tiêu đề trong thẻ */
+.field-card h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Hình ảnh trong thẻ dịch vụ */
+.field-card img {
+  max-width: 100%; /* Chiều rộng tối đa bằng với thẻ */
+  height: auto; /* Giữ nguyên tỷ lệ */
+  border-radius: 8px; /* Bo góc hình ảnh cho phù hợp với thẻ */
+  margin-bottom: 15px; /* Khoảng cách dưới hình ảnh */
+  object-fit: cover; /* Đảm bảo ảnh luôn vừa khít mà không bị méo */
+}
+
+/* Khi hover vào thẻ */
+.field-card:hover {
+  background-color: #e53935;
+}
+
+.field-card:hover h3 {
+  color: white;
+}
+
+/* Nút "Xem thêm" - Ẩn ban đầu */
+.view-more {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Nút hiện ra khi hover */
+.field-card:hover .view-more {
+  opacity: 1;
+  transform: translateY(0);
+}
