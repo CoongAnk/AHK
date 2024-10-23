@@ -4,37 +4,38 @@
   <meta charset="UTF-8"> <!-- Khai báo mã hóa ký tự UTF-8 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Đảm bảo trang web hiển thị tốt trên thiết bị di động -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
   <title>Trang Chủ</title> <!-- Tiêu đề trang web -->
   <link rel="stylesheet" href="TrangChu02.css"> <!-- Liên kết tệp CSS -->
+  <link rel="stylesheet" href="TrangChu03.css"> <!-- Liên kết tệp CSS -->
 </head>
 <body>
 
-  <div class="sidebar">
-    <!-- Logo ở đầu -->
-    <img src="/icons/Logo.jpg" alt="Logo" class="logo">
-  
-<!-- Nút Menu -->
+    <!-- Nút Menu -->
 <div class="menu-container">
-  <div class="menu-icon">&#9776;</div> <!-- Biểu tượng menu -->
+  <div id="menu-icon" class="menu-icon">&#9776;</div> <!-- Biểu tượng Menu -->
 </div>
 
-<!-- Sidebar Menu -->
-<div id="side-menu" class="side-menu">
-  <button id="close-button" class="close-button">✕</button>
-  <ul class="menu-items">
-    <li><a href="#" class="active">Trang Chủ</a></li>
-    <li><a href="#">Giới Thiệu Tập Đoàn</a></li>
-    <li><a href="#">Lĩnh Vực Hoạt Động</a></li>
-    <li><a href="#">Phát Triển Bền Vững</a></li>
-    <li><a href="#">Quan Hệ Cổ Đông</a></li>
-    <li><a href="#">Tin Tức Sự Kiện</a></li>
-    <li><a href="#">Tuyển Dụng</a></li>
-    <li><a href="#">Liên Hệ</a></li>
-  </ul>
-</div>
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <!-- Logo ở đầu sidebar -->
+   <a href="#" class="sidebar-logo">
+    <img src="/icons/Logo.jpg" alt="Logo" />
+   </a>
 
+  <!-- Icon tìm kiếm ở cuối sidebar -->
+  <div class="sidebar-search">
+    <i class="fa fa-search"></i> <!-- Icon tìm kiếm -->
   </div>
-  
+</div>
+
+<!-- Overlay -->
+<div id="page-overlay" class="page-overlay"></div>
 
   <!-- Phần hình nền lớn (Hero section) -->
   <div class="hero">
@@ -205,7 +206,59 @@
       <button>Xem thêm</button>
     </div>
   </a>
-  
+</section>
+
+<!-- Phần Feedback khách hàng -->
+<section class="latest-news">
+  <div class="container">
+      <div class="news-carousel">
+          <a href="#" class="news-items">
+              <div class="news-image">
+                  <img src="/images/01.jpg" alt="AUDI Q7 Phục hồi sửa chữa">
+              </div>
+              <div class="news-description">
+                  <h3>AUDI Q7 PHỤC HỒI SỬA CHỮA</h3>
+                  <p>Việc phục hồi xe sau tai nạn là một quá trình quan trọng để đảm bảo an toàn...</p>
+              </div>
+          </a>
+          <a href="#" class="news-items">
+              <div class="news-image">
+                  <img src="/images/02.jpg" alt="Phục hồi Mazda CX5">
+              </div>
+              <div class="news-description">
+                  <h3>PHỤC HỒI MAZDA CX5</h3>
+                  <p>Việc phục hồi xe sau tai nạn là một quá trình quan trọng để đảm bảo an toàn...</p>
+              </div>
+          </a>
+          <a href="#" class="news-items">
+              <div class="news-image">
+                  <img src="/images/03.jpg" alt="Thay đèn xe Mercedes">
+              </div>
+              <div class="news-description">
+                  <h3>THAY ĐÈN XE MERCEDES</h3>
+                  <p>Việc phục hồi xe sau tai nạn là một quá trình quan trọng để đảm bảo an toàn...</p>
+              </div>
+          </a>
+          <a href="#" class="news-items">
+              <div class="news-image">
+                  <img src="/images/04.jpg" alt="Phục hồi xe tai nạn">
+              </div>
+              <div class="news-description">
+                  <h3>PHỤC HỒI XE TAI NẠN</h3>
+                  <p>Việc phục hồi xe tai nạn là một quá trình quan trọng để đảm bảo an toàn...</p>
+              </div>
+          </a>
+          <a href="#" class="news-items">
+              <div class="news-image">
+                  <img src="/images/05.jpg" alt="Phục hồi xe">
+              </div>
+              <div class="news-description">
+                  <h3>PHỤC HỒI XE</h3>
+                  <p>Việc phục hồi xe tai nạn là một quá trình quan trọng để đảm bảo an toàn...</p>
+              </div>
+          </a>
+      </div>
+  </div>
 </section>
 
 <!-- Phần Footer -->
@@ -277,6 +330,7 @@
   <script src="TrangChu-JS/NutCuonXuong02.js"></script>
   <script src="TrangChu-JS/CuonDichVu02.js"></script>
   <script src="TrangChu-JS/NutMenu02.js"></script>
+  <script src="TrangChu-JS/ChuyenDongFeedback02.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -304,6 +358,18 @@
             });
         });
     });
+  </script>
+
+<script>
+  $(document).ready(function(){
+      $('.news-carousel').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: true,
+      });
+  });
 </script>
 
 </body>

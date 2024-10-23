@@ -1,24 +1,28 @@
-// Lấy các phần tử cần thiết
+// Lấy các phần tử
 const menuIcon = document.querySelector('.menu-icon');
-const closeButton = document.getElementById('close-button');
-const sideMenu = document.getElementById('side-menu');
-const bodyOverlay = document.createElement('div'); // Tạo phần tử nền trắng
+const sidebar = document.getElementById('sidebar');
+const pageOverlay = document.getElementById('page-overlay');
 
-// Thêm class cho nền trắng
-bodyOverlay.classList.add('body-overlay');
-document.body.appendChild(bodyOverlay); // Thêm vào body
-
-// Mở menu khi nhấn vào biểu tượng menu
+// Toggle trạng thái mở sidebar và đổi icon
 menuIcon.addEventListener('click', () => {
-  sideMenu.classList.add('open'); // Mở sidebar
-  bodyOverlay.classList.add('active'); // Hiển thị nền trắng
+  sidebar.classList.toggle('open'); // Mở/Đóng sidebar
+  pageOverlay.classList.toggle('active'); // Hiển thị/Ẩn overlay
+
+  // Đổi biểu tượng từ Menu sang Close và ngược lại
+  if (menuIcon.innerHTML === '✕') {
+    menuIcon.innerHTML = '&#9776;'; // Trở lại icon Menu
+  } else {
+    menuIcon.innerHTML = '✕'; // Đổi thành icon Close
+  }
+
+  // Thêm hiệu ứng xoay và đổi màu cho icon
+  menuIcon.classList.toggle('active');
 });
 
-// Đóng menu khi nhấn vào nút đóng hoặc nền trắng
-closeButton.addEventListener('click', closeMenu);
-bodyOverlay.addEventListener('click', closeMenu);
-
-function closeMenu() {
-  sideMenu.classList.remove('open'); // Đóng sidebar
-  bodyOverlay.classList.remove('active'); // Ẩn nền trắng
-}
+// Đóng sidebar khi nhấn vào overlay
+pageOverlay.addEventListener('click', () => {
+  sidebar.classList.remove('open');
+  pageOverlay.classList.remove('active');
+  menuIcon.innerHTML = '&#9776;'; // Trở lại icon Menu
+  menuIcon.classList.remove('active');
+});
