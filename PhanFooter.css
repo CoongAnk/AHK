@@ -1,0 +1,158 @@
+/* Phần Footer */
+.footer-section {
+  padding: 50px 100px;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3, .footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li i {
+  margin-right: 20px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #007bff;
+}
+
+.footer-column,
+.cont-info{
+  width: 300px;
+}
+
+.footer-column,
+.copmany-info{
+  margin-left: 25px;
+}
+
+/* Định dạng phần Giờ làm việc */
+.working-hours-box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.working-hours-icon {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.working-hours-icon i {
+  font-size: 40px;
+  color: #ffc107;
+}
+
+.working-hours-box h4 {
+  margin-bottom: 10px;
+}
+
+.working-hours-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.working-hours-box ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* Social Icons Fixed */
+.social-icons-fixed {
+  padding-bottom: 50px;
+  position: fixed;
+  right: 20px; /* Căn sang phải 20px */
+  bottom: 20px; /* Căn dưới cùng 20px */
+  display: flex;
+  flex-direction: column; /* Các biểu tượng xếp chồng lên nhau */
+  gap: 10px; /* Khoảng cách giữa các biểu tượng */
+  z-index: 999; /* Luôn nằm trên các phần tử khác */
+}
+
+.social-icons-fixed a {
+  display: block;
+  width: 50px; /* Kích thước mỗi biểu tượng */
+  height: 50px;
+  border-radius: 50%; /* Đảm bảo biểu tượng tròn */
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+  transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.social-icons-fixed a img {
+  width: 100%; /* Ảnh bao phủ toàn bộ phần tử */
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh không bị bóp méo */
+}
+
+.social-icons-fixed a:hover {
+  transform: scale(1.1); /* Phóng to khi hover */
+}
+
+.icon-phone {
+    animation: shake-rotate 1s infinite; /* Hiệu ứng kéo dài 1 giây và chạy vô hạn */
+    transform-origin: center; /* Điểm quay là trung tâm */
+}
+
+@keyframes shake-rotate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(30deg); }
+    20% { transform: rotate(-30deg); }
+    30% { transform: rotate(30deg); }
+    40% { transform: rotate(-30deg); }
+    50% { transform: rotate(25deg); }
+    60% { transform: rotate(-25deg); }
+    70% { transform: rotate(20deg); }
+    80% { transform: rotate(-20deg); }
+    90% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

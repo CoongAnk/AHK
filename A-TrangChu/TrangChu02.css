@@ -355,7 +355,7 @@ body {
 .field-content {
   padding: 0 100px;
   max-width: 45%;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Container cho các thẻ dịch vụ, sử dụng flexbox */
@@ -608,93 +608,4 @@ body {
   font-size: 14px;
   color: #777;
   margin-top: 10px;
-}
-
-/* Phần Footer */
-.footer-section {
-  padding: 50px 20px;
-  background-color: #f8f9fa;
-  color: #333;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-container {
-  padding: 50px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-  margin: 20px;
-}
-
-.footer-logo {
-  width: 100px;
-  margin-bottom: 20px;
-}
-
-.footer-column h3, .footer-column h4 {
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li i {
-  margin-right: 10px;
-}
-
-.footer-column ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-  color: #007bff;
-}
-
-/* Định dạng phần Giờ làm việc */
-.working-hours-box {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  color: #fff;
-}
-
-.working-hours-icon {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.working-hours-icon i {
-  font-size: 40px;
-  color: #ffc107;
-}
-
-.working-hours-box h4 {
-  margin-bottom: 10px;
-}
-
-.working-hours-box ul {
-  list-style: none;
-  padding: 0;
-}
-
-.working-hours-box ul li {
-  margin-bottom: 10px;
-  color: #ddd;
 }

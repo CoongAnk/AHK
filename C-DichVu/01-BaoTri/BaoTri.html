@@ -4,78 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Dịch vụ bảo trì</title>
+
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
-    <title>Garage AHK - Bảo trì, Bảo dưỡng</title>
-    <!-- Boxicons for icons -->
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <!-- File CSS tùy chỉnh -->
     <link rel="stylesheet" href="BaoTri.css">
+    <link rel="stylesheet" href="/ThanhSidebar.css">
+    <link rel="stylesheet" href="/PhanFooter.css">
 </head>
 <body>
 
-    <!-- Welcome and Social Icons -->
-    <div class="welcome-social">
-        <span>Chào mừng bạn đến với Trung Tâm Sửa Chữa Ô Tô AHK</span>
-        <div class="social-icons">
-            <a href="#"><i class="bx bxl-facebook"></i></a>
-            <a href="#"><i class="bx bxl-twitter"></i></a>
-            <a href="#"><i class="bx bxl-google"></i></a>
-            <a href="#"><i class="bx bxl-youtube"></i></a>
-        </div>
+    <!-- Nút Menu -->
+<div class="menu-container">
+    <div id="menu-icon" class="menu-icon">&#9776;</div> <!-- Biểu tượng Menu -->
+  </div>
+  
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <!-- Logo ở đầu sidebar -->
+     <a href="/A-TrangChu/TrangChu02.html" class="sidebar-logo">
+      <img src="/icons/Logo.jpg" alt="Logo" />
+     </a>
 
+    <!-- Icon tìm kiếm ở cuối sidebar -->
+    <div class="sidebar-search">
+        <i class="fa fa-search"></i> <!-- Icon tìm kiếm -->
     </div>
-
-    <!-- Header Thông Tin -->
-    <div class="header-info">
-        <div class="info-block">
-            <i class="bx bx-map icon-text"></i>
-            <span>Địa chỉ showroom: 1075 Giải Phóng, Giáp Bát, Hoàng Mai, Hà Nội</span>
-        </div>
-        <div class="info-block">
-            <i class="bx bx-time-five icon-text"></i>
-            <span>Thời gian làm việc: 9h00 - 19h00, Thứ 2 - Thứ 7</span>
-        </div>
-        <div class="info-block">
-            <i class="bx bx-phone icon-text"></i>
-            <span>Hotline tư vấn: 0923387840</span>
-        </div>
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul class="navbar-menu">
-            <a class="navbar-brand" href="#">
-                <img src="/images/Logo.jpg" alt="Garage Quang Đức" height="50">
-            </a>
-            <li><a href="/A-TrangChu/TrangChu02.html">Trang chủ</a></li>
-            <li><a href="/B-GioiThieu/GioiThieu01.html">Giới thiệu</a></li>
-            <li class="dropdown">
-                <a href="/C-DichVu/01-BaoTri/BaoTri.html" class="nav-link">Dịch vụ</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Bảo trì, bảo dưỡng</a></li>
-                    <li><a href="/C-DichVu/02-GamMay/GamMay01.html">Dịch vụ gầm máy</a></li>
-                    <li><a href="/C-DichVu/03-PhucHoi/PhucHoi.html">Phục hồi xe tai nạn - Va chạm</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="nav-link">Tin tức</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Garage Phục Hồi Xe Va Chạm - Đâm Đụng Ở Hà Nội</a></li>
-                    <li><a href="#">Sơn Xe - Sơn lazang</a></li>
-                    <li><a href="#">Bảo Dưỡng Xe Định Kì - Bảo Dưỡng Cấp Độ</a></li>
-                </ul>
-            </li>    
-            <li><a href="/E-LienHe/LienHe01.html">Liên hệ</a></li>
-            <div class="search-form">
-                <input type="text" placeholder="Tìm kiếm" aria-label="Search">
-                <button type="submit">Tìm kiếm</button>
-            </div>
+  </div>
+  
+  <!-- Overlay -->
+  <div id="page-overlay" class="page-overlay">
+    <ul class="menu-items">
+      <li><a href="/A-TrangChu/TrangChu02.html" class="active">Trang Chủ</a></li>
+      <li><a href="/B-GioiThieu/GioiThieu01.html">Giới Thiệu</a></li>
+  
+      <li class="has-submenu">
+        <a href="/C-DichVu/01-BaoTri/BaoTri.html" class="expandable">Dịch vụ</a>
+        <ul class="submenu">
+          <li><a href="#">Bảo trì</a></li>
+          <li><a href="/C-DichVu/02-GamMay/GamMay01.html">Gầm máy</a></li>
+          <li><a href="/C-DichVu/03-PhucHoi/PhucHoi.html">Phục hồi</a></li>
         </ul>
-    </nav>
+      </li>
+  
+      <li><a href="#">Tin Tức</a></li>
+  
+      <li><a href="/E-LienHe/LienHe01.html">Liên Hệ</a></li>
+    </ul>
+  </div>
 
     <!-- Phần tiêu đề chính (Hero Section) -->
     <section class="hero">
@@ -95,24 +80,12 @@
                 <p>Dịch vụ đồng sơn</p>
             </div>
             <div class="service-item">
-                <img src="/images/02.jpg" alt="Phục hồi xe tai nạn">
-                <p>Phục hồi xe tai nạn</p>
+                <img src="/images/02.jpg" alt="Dịch vụ gầm máy">
+                <p>Dịch vụ gầm máy</p>
             </div>
             <div class="service-item">
                 <img src="/images/03.jpg" alt="Bảo trì, bảo dưỡng xe">
                 <p>Bảo trì, bảo dưỡng xe</p>
-            </div>
-            <div class="service-item">
-                <img src="/images/04.jpg" alt="Dịch vụ gầm máy">
-                <p>Dịch vụ gầm máy</p>
-            </div>
-            <div class="service-item">
-                <img src="/images/05.jpg" alt="Chăm sóc nội ngoại thất xe">
-                <p>Chăm sóc nội ngoại thất xe</p>
-            </div>
-            <div class="service-item">
-                <img src="/images/06.jpg" alt="Tư vấn bảo hiểm">
-                <p>Tư vấn bảo hiểm</p>
             </div>
         </div>
 
@@ -264,85 +237,82 @@
 </section>
 
     <!-- Phần Footer -->
-    <footer class="footer-section">
-        <div class="footer-container">
-            <!-- Thông tin liên hệ -->
-            <div class="footer-column contact-info">
-                <img src="/images/Logo.jpg" alt="Garage Quang Đức" class="footer-logo">
-                <h3>GARAGE AHKC</h3>
-                <ul>
-                    <li><i class='bx bxs-home'></i> Trụ sở: 1075 Giải Phóng, Giáp Bát, Hoàng Mai, Hà Nội</li>
-                    <li><i class='bx bxs-phone'></i> Hotline: 0962677726</li>
-                    <li><i class='bx bxs-envelope'></i> Email: Garaquangduc1075@gmail.com</li>
-                </ul>
-            </div>
-
-            <!-- Thông tin công ty -->
-            <div class="footer-column company-info">
-                <h4>Thông tin công ty</h4>
-                <ul>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Dịch vụ</a></li>
-                    <li><a href="#">Tin tức</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
-            </div>
-
-            <!-- Dịch vụ -->
-            <div class="footer-column services-info">
-                <h4>Dịch vụ</h4>
-                <ul>
-                    <li><a href="#">Bảo trì, bảo dưỡng</a></li>
-                    <li><a href="#">Dịch vụ sơn lazang ô tô</a></li>
-                    <li><a href="#">Phục hồi xe tai nạn - Va chạm</a></li>
-                    <li><a href="#">Dịch vụ gầm máy</a></li>
-                    <li><a href="#">Cứu hộ giao thông</a></li>
-                    <li><a href="#">Tư vấn bảo hiểm Thân vỏ - TNDS</a></li>
-                    <li><a href="#">Vệ sinh chăm sóc - SPA xe</a></li>
-                </ul>
-            </div>
-
-            <!-- Giờ làm việc -->
-            <div class="footer-column working-hours">
-                <div class="working-hours-box">
-                    <div class="working-hours-icon">
-                        <i class='bx bx-time'></i>
-                    </div>
-                    <h4>GIỜ LÀM VIỆC</h4>
-                    <ul>
-                        <li>Thứ 2: 9h00 - 19h00</li>
-                        <li>Thứ 3: 9h00 - 19h00</li>
-                        <li>Thứ 4: 9h00 - 19h00 </li>
-                        <li>Thứ 5: 9h00 - 19h00 </li>
-                        <li>Thứ 6: 9h00 - 19h00 </li>
-                        <li>Thứ 7: 9h00 - 19h00 </li>
-                    </ul>
+<footer class="footer-section">
+    <div class="footer-container">
+        <!-- Thông tin liên hệ -->
+        <div class="footer-column cont-info">
+            <img src="/icons/Logo.jpg" alt="Garage Quang Đức" class="footer-logo">
+            <h3>GARAGE AHKC</h3>
+            <ul>
+                <li><i class='bx bxs-home'></i> https://www.facebook.com/garaphuchoan</li>
+                <li><i class='bx bxs-phone'></i> Hotline: 0913 518 953</li>
+                <li><i class='bx bxs-envelope'></i> Email: garaphuchoan@gmail.com</li>
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=52b584c4-d79c-4d9e-b37c-4b8f5771e4c1" title="DMCA.com Protection Status" class="dmca-badge"> 
+                    <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=52b584c4-d79c-4d9e-b37c-4b8f5771e4c1"  alt="DMCA.com Protection Status" />
+                </a>  
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+  
+            </ul>
+        </div>
+  
+        <!-- Thông tin công ty -->
+        <div class="footer-column company-info">
+            <h4>Thông tin công ty</h4>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="/B-GioiThieu/GioiThieu01.html">Giới thiệu</a></li>
+                <li><a href="/C-DichVu/01-BaoTri/BaoTri.html">Dịch vụ</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="/E-LienHe/LienHe01.html">Liên hệ</a></li>
+            </ul>
+        </div>
+  
+        <!-- Dịch vụ -->
+        <div class="footer-column services-info">
+            <h4>Dịch vụ</h4>
+            <ul>
+                <li><a href="/C-DichVu/01-BaoTri/BaoTri.html">Bảo trì, bảo dưỡng</a></li>
+                <li><a href="/C-DichVu/02-GamMay/">Dịch vụ gầm máy</a></li>
+                <li><a href="/C-DichVu/03-PhucHoi/PhucHoi.html">Phục hồi xe tai nạn - Va chạm</a></li>
+            </ul>
+        </div>
+  
+        <!-- Giờ làm việc -->
+        <div class="footer-column working-hours">
+            <div class="working-hours-box">
+                <div class="working-hours-icon">
+                    <img src="/icons/Clock-02.png" height="50">
                 </div>
+                <h4>GIỜ LÀM VIỆC</h4>
+                <ul>
+                    <li>Thứ 2: 9h00 - 19h00</li>
+                    <li>Thứ 3: 9h00 - 19h00</li>
+                    <li>Thứ 4: 9h00 - 19h00 </li>
+                    <li>Thứ 5: 9h00 - 19h00 </li>
+                    <li>Thứ 6: 9h00 - 19h00 </li>
+                    <li>Thứ 7: 9h00 - 19h00 </li>
+                </ul>
             </div>
         </div>
-    </footer>
-
-    <!-- Nút quay lại đầu trang -->
-    <a href="#" id="back-to-top" class="back-to-top">
-        <i class='bx bx-up-arrow-alt'></i>
-    </a>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Garage AHK. All rights reserved.</p>
-    </footer>
-
-    <!-- Social Icons Fixed -->
-    <div class="social-icons-fixed">
-        <a href="#" class="social-icon facebook"><img src="/images/01.jpg" alt="Facebook"></a>
-        <a href="#" class="social-icon zalo"><img src="/images/02.jpg" alt="Zalo"></a>
-        <a href="tel:0923387840" class="social-icon phone"><img src="/images/03.jpg" alt="Phone"></a>
-        <a href="#" class="social-icon messenger"><img src="/images/04.jpg" alt="Messenger"></a>
-        <a href="#" class="social-icon maps"><img src="/images/05.jpg" alt="Google Maps"></a>
     </div>
+  </footer>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Garage AHK. All rights reserved.</p>
+  </footer>
+  
+  <!-- Social Icons Fixed -->
+  <div class="social-icons-fixed">
+    <a href="https://www.facebook.com/garaphuchoan" class="social-icon facebook"><img src="/icons/Logo FB.webp" alt="Facebook"></a>
+    <a href="#" class="social-icon zalo"><img src="/icons/Logo Zalo.jpg" alt="Zalo"></a>
+    <a href="tel:0923387840" class="icon-phone"><img src="/icons/Logo Phone.png" alt="Phone"></a>
+    <a href="https://www.facebook.com/garaphuchoan" class="social-icon messenger"><img src="/icons/Logo Mes.png" alt="Messenger"></a>
+    <a href="https://maps.app.goo.gl/kk4zgrAmjhvnoJTW9" class="social-icon maps"><img src="/icons/Logo Map.jpg" alt="Google Maps"></a>
+  </div>  
 
     <script src="BaoTri-JS/ThongTinMoi01.js"></script>
+    <script src="/ThanhSidebar.js"></script>
 
     <script>
         $(document).ready(function(){
