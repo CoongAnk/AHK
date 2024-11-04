@@ -92,18 +92,23 @@
 /* Menu items ở giữa */
 .menu-items {
   list-style: none;
-  padding: 100px 200px;
-  width: 100%;
   text-align: left;
   justify-self: center;
   z-index: 2;
+  padding: 124px;
+  width: 100%; /* Chiều rộng đầy đủ của danh sách */
+  
 }
 
 .menu-items li {
-  margin: 5px 0;
   opacity: 0; /* Ban đầu ẩn */
   position: relative; /* Quan trọng để định vị submenu */
   animation: slideDown 0.5s ease forwards; /* Hiệu ứng xuất hiện */
+
+  width: auto; /* Hoặc có thể đặt width cố định, ví dụ 80% */
+  max-width: 200px; /* Đặt chiều rộng tối đa cho menu item */
+  margin: 15px 0; /* Căn giữa menu item */
+  text-align: left;
 }
 
 /* Tạo hiệu ứng xuất hiện lần lượt */
@@ -165,11 +170,12 @@
   display: none;
   position: absolute;
   top: 0;
-  left: 300px; /* Đẩy submenu sang phải của menu chính */
+  left: 100%; /* Đẩy submenu sang phải của menu chính */
   width: 250px;
   padding: 10px -50px;
   list-style: none;
   animation: slideRight 0.3s ease-in-out;
+  transition: max-height 0.3s ease; /* Hiệu ứng mượt mà */
   z-index: 3;
 }
 
@@ -202,6 +208,7 @@
 .has-submenu:hover .submenu {
   display: block;
   animation: fadeIn 0.3s ease; /* Hiệu ứng hiển thị submenu */
+  z-index: 3;
 }
 
 /* Overlay */

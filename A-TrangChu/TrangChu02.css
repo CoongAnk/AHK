@@ -99,11 +99,9 @@ html {
 
 /* Tiêu đề của phần tin tức */
 .news-title {
-  margin-left: 50px;
-  font-size: 32px; /* Kích thước chữ tiêu đề */
-  margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
-  font-weight: 500; /* Độ đậm vừa phải */
-  text-align: left;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 /* Container chứa các bài viết, dùng Flexbox để xếp hàng ngang */
@@ -287,6 +285,7 @@ body {
 /* Đoạn văn mô tả */
 .field-content p {
   font-family: 'Roboto', sans-serif;
+  text-align: justify;
   font-weight: 300; /* Chữ mỏng */
   font-size: 18px;
   line-height: 1.6;
@@ -319,6 +318,7 @@ body {
 /* Tiêu đề trong thẻ */
 .field-card h3 {
   font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
   font-weight: 700;
   font-size: 22px;
   color: #333; /* Màu xám đậm */
@@ -455,6 +455,10 @@ body {
   color: white;
 }
 
+.about-text p {
+  text-align: justify;
+}
+
 /* Nút "Xem thêm" - Ẩn ban đầu */
 .view-more {
   font-size: 16px;
@@ -530,6 +534,7 @@ body {
   font-size: 16px;
   color: #333;
   border-radius: 5px;
+  text-align: justify;
 }
 
 .faq-answer a {
@@ -567,15 +572,10 @@ body {
   background-color: #ffffff;
 }
 
-.section-title h2 {
-  display: inline-block;
-  background-color: #fbc02d;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 28px;
-  margin-bottom: 40px;
+.latest-news h2 {
   text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .news-items {

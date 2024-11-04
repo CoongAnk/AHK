@@ -1,11 +1,12 @@
-/* Phần Footer */
+/* Footer Section */
 .footer-section {
-  padding: 50px 100px;
+  padding: 40px 80px;
   background-color: #f8f9fa;
   color: #333;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px; /* Khoảng cách giữa các cột */
 }
 
 .footer-container {
@@ -15,20 +16,23 @@
   flex-wrap: wrap;
 }
 
+/* Footer Column */
 .footer-column {
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
+  padding: 0 15px; /* Padding cho khoảng cách bên trong cột */
 }
 
 .footer-logo {
-  width: 100px;
+  width: 120px;
   margin-bottom: 20px;
 }
 
 .footer-column h3, .footer-column h4 {
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+  color: #000000; /* Màu nổi bật cho tiêu đề */
 }
 
 .footer-column ul {
@@ -38,37 +42,33 @@
 
 .footer-column ul li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .footer-column ul li i {
-  margin-right: 20px;
+  margin-right: 10px;
+  color: #000000; /* Màu nổi bật cho icon */
 }
 
 .footer-column ul li a {
   color: #333;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
-  color: #007bff;
+  color: #000000; /* Đổi màu khi hover */
 }
 
-.footer-column,
-.cont-info{
-  width: 300px;
-}
-
-.footer-column,
-.copmany-info{
-  margin-left: 25px;
-}
-
-/* Định dạng phần Giờ làm việc */
+/* Working Hours Box */
 .working-hours-box {
   background-color: #333;
   padding: 20px;
   border-radius: 10px;
   color: #fff;
+  width: 280px;
+  text-align: center;
 }
 
 .working-hours-icon {
@@ -83,6 +83,7 @@
 
 .working-hours-box h4 {
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .working-hours-box ul {
@@ -91,7 +92,7 @@
 }
 
 .working-hours-box ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #ddd;
 }
 
@@ -99,37 +100,38 @@
 .social-icons-fixed {
   padding-bottom: 50px;
   position: fixed;
-  right: 20px; /* Căn sang phải 20px */
-  bottom: 20px; /* Căn dưới cùng 20px */
+  right: 20px;
+  bottom: 20px;
   display: flex;
-  flex-direction: column; /* Các biểu tượng xếp chồng lên nhau */
-  gap: 10px; /* Khoảng cách giữa các biểu tượng */
-  z-index: 999; /* Luôn nằm trên các phần tử khác */
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
 }
 
 .social-icons-fixed a {
   display: block;
-  width: 50px; /* Kích thước mỗi biểu tượng */
+  width: 50px;
   height: 50px;
-  border-radius: 50%; /* Đảm bảo biểu tượng tròn */
+  border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
-  transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .social-icons-fixed a img {
-  width: 100%; /* Ảnh bao phủ toàn bộ phần tử */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh không bị bóp méo */
+  object-fit: cover;
 }
 
 .social-icons-fixed a:hover {
-  transform: scale(1.1); /* Phóng to khi hover */
+  transform: scale(1.1);
 }
 
+/* Phone Icon Animation */
 .icon-phone {
-    animation: shake-rotate 1s infinite; /* Hiệu ứng kéo dài 1 giây và chạy vô hạn */
-    transform-origin: center; /* Điểm quay là trung tâm */
+    animation: shake-rotate 1s infinite;
+    transform-origin: center;
 }
 
 @keyframes shake-rotate {
@@ -146,13 +148,11 @@
     100% { transform: rotate(0deg); }
 }
 
-/* Footer */
+/* Footer Bottom */
 .footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 15px;
+  font-size: 14px;
 }

@@ -42,6 +42,5 @@ const submenu = expandableMenu.querySelector('.submenu');
 
 // Toggle submenu khi nhấn vào "Lĩnh Vực Hoạt Động"
 expandableMenu.addEventListener('click', (e) => {
-  e.preventDefault(); // Ngăn chặn điều hướng mặc định
   submenu.classList.toggle('active'); // Hiển thị / Ẩn submenu
 });
