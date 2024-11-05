@@ -1,12 +1,11 @@
 /* Footer Section */
 .footer-section {
-  padding: 40px 80px;
+  padding: 40px 75px;
   background-color: #f8f9fa;
   color: #333;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px; /* Khoảng cách giữa các cột */
+  gap: 20px;
 }
 
 .footer-container {
@@ -14,17 +13,18 @@
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Footer Column */
 .footer-column {
   flex: 1;
   min-width: 220px;
-  padding: 0 15px; /* Padding cho khoảng cách bên trong cột */
+  max-width: 400px;
+  padding: 0 15px;
 }
 
 .footer-logo {
-  width: 120px;
+  width: 100px;
   margin-bottom: 20px;
 }
 
@@ -32,7 +32,7 @@
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: bold;
-  color: #000000; /* Màu nổi bật cho tiêu đề */
+  color: #333;
 }
 
 .footer-column ul {
@@ -48,52 +48,152 @@
 
 .footer-column ul li i {
   margin-right: 10px;
-  color: #000000; /* Màu nổi bật cho icon */
+  color: #ffc107;
 }
 
 .footer-column ul li a {
-  color: #333;
+  color: #434343;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
-  color: #000000; /* Đổi màu khi hover */
+  color: #000000;
 }
 
-/* Working Hours Box */
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  /* Đặt cấu trúc để cột đầu tiên chiếm toàn bộ dòng */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Cột logo và thông tin liên hệ sẽ chiếm toàn bộ chiều rộng */
+  .footer-column:first-child {
+    width: 100%;
+    max-width: none;
+    text-align: center; /* Căn giữa nội dung trong cột */
+    margin-bottom: 20px; /* Thêm khoảng cách với các cột khác */
+  }
+
+  /* Các cột khác cũng chiếm toàn bộ chiều rộng nhưng bên dưới cột đầu tiên */
+  .footer-column {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 20px 10px;
+  }
+
+  .footer-column h3, .footer-column h4 {
+    font-size: 18px;
+  }
+
+  .footer-logo {
+    width: 80px;
+  }
+}
+
+/* Cột Giờ làm việc */
 .working-hours-box {
   background-color: #333;
+  color: #fff;
   padding: 20px;
   border-radius: 10px;
-  color: #fff;
-  width: 280px;
+  width: 250px; /* Chiều rộng cố định cho cột "Giờ làm việc" */
   text-align: center;
-}
-
-.working-hours-icon {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.working-hours-icon i {
-  font-size: 40px;
-  color: #ffc107;
+  position: relative;
 }
 
 .working-hours-box h4 {
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .working-hours-box ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .working-hours-box ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
   color: #ddd;
+}
+
+/* Cột Giờ làm việc */
+.working-hours-box {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px; /* Chiều rộng cố định cho cột "Giờ làm việc" */
+  text-align: center;
+  position: relative;
+}
+
+.working-hours-box h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.working-hours-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.working-hours-box ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+/* Định dạng icon đồng hồ */
+.working-hours-icon {
+  position: absolute;
+  top: -25px; /* Đẩy icon lên trên cột */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffc107;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.working-hours-icon img {
+  width: 100%; /* Đảm bảo hình ảnh bao phủ toàn bộ phần tử */
+  height: 100%;
+  object-fit: cover; /* Giữ tỉ lệ hình ảnh */
+}
+
+/* Các icon khác trong phần thông tin liên hệ */
+.footer-column ul li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .working-hours-box {
+    width: 100%; /* Để cột chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    max-width: none;
+    margin-top: 20px;
+  }
 }
 
 /* Social Icons Fixed */

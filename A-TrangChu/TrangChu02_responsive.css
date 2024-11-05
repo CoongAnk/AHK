@@ -609,3 +609,32 @@ body {
   color: #777;
   margin-top: 10px;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .news-container, .faq-columns, .card-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        gap: 10px; /* Adjust spacing between elements */
+    }
+    .field-content, .card-container {
+        width: 100%; /* Full width to avoid overlap */
+    }
+    .news-item, .faq-column, .field-card {
+        width: 100%;
+        max-width: 100%; /* Ensure elements don't exceed screen width */
+    }
+}
+
+/* General adjustments to prevent overlapping */
+.hero, .news-section, .about-section, .faq-section, .latest-news {
+    position: relative;
+    z-index: 1;
+}
+.news-container, .faq-columns, .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap on small screens */
+}
+.section {
+    padding: 20px 5%;
+    margin-bottom: 20px;
+}
