@@ -569,43 +569,48 @@ body {
 /* Phần Feedback */
 .latest-news {
   padding: 50px 100px;
-  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ẩn thanh cuộn bên phải và bên dưới */
+  align-items: center;
 }
 
 .latest-news h2 {
   text-align: center;
   font-size: 28px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.news-carousel {
+  display: flex;
+  scroll-behavior: smooth;
+  gap: 20px; /* Khoảng cách giữa các ảnh */
+  justify-content: center; /* Căn giữa các ảnh theo chiều ngang */
 }
 
 .news-items {
-  background-color: #f8f8f8;
+  flex: 0 0 30%; /* Luôn giữ kích thước cố định cho ba ảnh trên màn hình lớn */
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   transition: transform 0.3s ease;
-  text-align: center;
-  text-decoration: none;
   color: inherit;
-  scroll-behavior: smooth; /* Cuộn mượt mà */
+  text-decoration: none;
 }
 
 .news-image img {
-  width: 100%;
+  width: 300px;
   border-radius: 10px;
-  height: 180px;
+  height: auto; /* Chiều cao ảnh cố định */
   object-fit: cover;
 }
 
-.news-description h3 {
-  font-size: 18px;
-  margin-top: 15px;
-  color: #333;
-  font-weight: bold;
+@media (max-width: 1200px) {
+  .news-items {
+    flex: 0 0 50%; /* Chuyển thành hai ảnh khi màn hình nhỏ hơn 1024px */
+  }
 }
 
-.news-description p {
-  font-size: 14px;
-  color: #777;
-  margin-top: 10px;
+@media (max-width: 800px) {
+  .news-items {
+    flex: 0 0 100%; /* Chuyển thành một ảnh khi màn hình nhỏ hơn 600px */
+  }
 }
