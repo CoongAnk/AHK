@@ -193,7 +193,7 @@ html {
 
 /* Phần giới thiệu */
 .about-section {
-  padding: 50px 100px;
+  padding: 50px 150px;
   background-color: #f9f9f9;
 }
 
@@ -255,7 +255,7 @@ html {
   overflow: hidden;
   height: 100vh;
   background-color: #f8f8f8;
-  padding: 50px;
+  padding: 50px 100px;
   align-items: center;
   justify-content: space-between;
 }
@@ -478,7 +478,7 @@ body {
 
 /* Phần Câu hỏi thường gặp */
 .faq-section {
-  padding: 50px 100px;
+  padding: 50px 150px;
   background-color: #ffffff;
 }
 
