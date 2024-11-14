@@ -17,7 +17,7 @@
   <title>Trang Chủ</title> <!-- Tiêu đề trang web -->
   <link rel="stylesheet" href="TrangChu02.css"> <!-- Liên kết tệp CSS -->
   <link rel="stylesheet" href="/ThanhSidebar.css">
-    <link rel="stylesheet" href="/PhanFooter.css">
+  <link rel="stylesheet" href="/PhanFooter.css">
 
 </head>
 <body>
@@ -36,7 +36,9 @@
 
       <!-- Icon tìm kiếm ở cuối sidebar -->
       <div class="sidebar-search">
+        <a href="/D-TinTucMain/TinTucSearch.html">
         <i class="fa fa-search"></i> <!-- Icon tìm kiếm -->
+        </a>
       </div>
     </div>
 
@@ -55,7 +57,7 @@
           </ul>
         </li>
 
-        <li><a href="#">Tin Tức</a></li>
+        <li><a href="/D-TinTucMain/TinTucMain.html">Tin Tức</a></li>
 
         <li><a href="/E-LienHe/LienHe01.html">Liên Hệ</a></li>
       </ul>
@@ -79,37 +81,11 @@
 
   <!-- Phần Tin tức sự kiện -->
 <section id="news" class="news-section">
-  <h2 class="news-title">Tin tức sự kiện</h2>
+  <h2 class="news-title">Tin tức mới nhất</h2>
   <div class="news-container">
-    <!-- Bài viết 1 -->
-    <a href="#" class="news-item">
-      <div class="image-wrapper">
-        <img src="/images/02.jpg" alt="Sự kiện 1">
-      </div>
-      <h3>Công ty ngân lực thuê 200 ô tô điện VinFast và hợp tác mở rộng mạng lưới trạm sạc V-Green</h3>
-      <p>14-10-2024</p>
-    </a>
-  
-    <!-- Bài viết 2 -->
-    <a href="#" class="news-item">
-      <div class="image-wrapper">
-        <img src="/images/02.jpg" alt="Sự kiện 2">
-      </div>
-      <h3>VinFast hợp tác với CarOn mở chuỗi xưởng dịch vụ xe điện trên toàn quốc</h3>
-      <p>11-10-2024</p>
-    </a>
-  
-    <!-- Bài viết 3 -->
-    <a href="#" class="news-item">
-      <div class="image-wrapper">
-        <img src="/images/01.jpg" alt="Sự kiện 3">
-      </div>
-      <h3>Vinhomes Royal Island tổ chức chuỗi sự kiện tôn vinh “Chị đẹp Hải Phòng: Sáng tâm hồn - Ngời khí chất”</h3>
-      <p>11-10-2024</p>
-    </a>
   </div>
   
-  <a href="#" class="view-all">Xem tất cả</a>
+  <a href="/D-TinTucMain/TinTucMain.html" class="view-all">Xem tất cả</a>
 </section>
 
 <section class="fields-section">
@@ -290,7 +266,7 @@
             <li><a href="#">Trang chủ</a></li>
                 <li><a href="/B-GioiThieu/GioiThieu01.html">Giới thiệu</a></li>
                 <li><a href="/C-DichVu/01-BaoTri/BaoTri.html">Dịch vụ</a></li>
-                <li><a href="#">Tin tức</a></li>
+                <li><a href="/D-TinTucMain/TinTucMain.html">Tin tức</a></li>
                 <li><a href="/E-LienHe/LienHe01.html">Liên hệ</a></li>
           </ul>
         </div>
@@ -343,6 +319,7 @@
   <script src="TrangChu-JS/CuonDichVu02.js"></script>
   <script src="TrangChu-JS/ChuyenDongFeedback02.js"></script>
   <script src="/ThanhSidebar.js"></script>
+  <script src="TrangChu-JS/TinTucGanDay.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {

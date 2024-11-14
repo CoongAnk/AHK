@@ -71,7 +71,7 @@ fetch(url)
                             element.style.display = 'block';
                         } else if (headers[i].includes('Content')) {
                             element = document.createElement('p');
-                            element.style.fontSize = '24px';
+                            element.style.fontSize = '16px';
                             element.style.lineHeight = '1.8';
                             element.style.color = '#333';
                             element.innerHTML = content[i];

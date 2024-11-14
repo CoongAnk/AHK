@@ -89,6 +89,10 @@
   cursor: pointer;
 }
 
+.sidebar-search i:hover {
+  color: #e53935;
+}
+
 /* Menu items ở giữa */
 .menu-items {
   list-style: none;

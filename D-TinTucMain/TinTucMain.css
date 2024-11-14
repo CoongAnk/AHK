@@ -14,15 +14,17 @@ body {
 
 /* Container */
 .news-container {
-    max-width: 1800px;
-    margin: 80px auto;
-    padding: 60px;
+    max-width: 80%;
+    margin: 15px auto;
+    padding: 2px 150px;
+    transform: scale(0.9); /* Thu nhỏ container xuống 90% kích thước ban đầu */
+    transform-origin: top center;
 }
 
 /* Section Title */
 .section-title {
     text-align: left;
-    font-size: 64px;
+    font-size: 36px;
     margin-bottom: 50px;
     color: #333;
 }
@@ -31,8 +33,8 @@ body {
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 520px auto;
-    gap: 40px;
+    grid-template-rows: 320px auto;
+    gap: 20px;
 }
 
 /* General News Card */
@@ -45,10 +47,11 @@ body {
     justify-content: flex-start;
     color: inherit; /* Inherit the text color from the parent element */
     text-decoration: none; /* Remove the underline */
+    height: 300px;
 }
 
 .news-card:hover {
-    transform: scale(1.08);
+    transform: scale(1.04);
     color: red; /* Change text color to red on hover */
     text-decoration: none; /* Ensure underline does not appear on hover */
 }
@@ -66,17 +69,19 @@ body {
 .news-card img {
     width: 100%;
     object-fit: cover;
+    height: 200px;
 }
 
 /* Specific Height for Other News Cards (Not the First Article) */
 .news-card:not(.large) img {
-    height: 360px; /* Set image height to 60% */
+    height: 200px; /* Set image height to 60% */
 }
 
 /* Large News Card - First Article */
 .news-card.large {
     grid-row: 1 / 2;
     grid-column: 1 / 3;
+    height: 300px;
 }
 
 /* First Article Image (Full Height or Custom) */
@@ -89,9 +94,9 @@ body {
     bottom: 0;
     left: 0;
     width: 100%; /* Full width of the parent */
-    height: 32%; /* Set height to 50% of the parent (news card) */
+    height: 35%; /* Set height to 50% of the parent (news card) */
     background: rgba(255, 255, 255, 0.7); /* White transparent overlay */
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -101,28 +106,28 @@ body {
 
 /* News Content */
 .news-content {
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     justify-content: flex-start;
     text-align: left;
 }
 
 .news-content .category {
-    font-size: 22px;
+    font-size: 18px;
     color: #d32f2f;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .news-content h2 {
-    font-size: 28px;
-    line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.3;
 }
 
 .news-content p {
-    font-size: 16px;
+    font-size: 14px;
     color: #777;
 }
 
@@ -150,10 +155,10 @@ body {
 }
 
 .page-number {
-    margin: 0 15px;
-    font-size: 28px;
+    margin: 0 5px;
+    font-size: 14px;
     color: #666;
-    padding: 15px 20px;
+    padding: 10px 14px;
     border: 2px solid #ddd;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -163,93 +168,4 @@ body {
 .page-number:hover {
     background-color: #d32f2f;
     color: #fff;
-}
-
-/* Footer Section */
-.footer-section {
-    padding: 50px 20px;
-    background-color: #f8f9fa;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-container {
-    padding: 50px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 250px;
-    margin: 20px;
-}
-
-.footer-logo {
-    width: 100px;
-    margin-bottom: 20px;
-}
-
-.footer-column h3,
-.footer-column h4 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-
-.footer-column ul li i {
-    margin-right: 10px;
-}
-
-.footer-column ul li a {
-    color: #333;
-    text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-    color: #007bff;
-}
-
-/* Working Hours Box */
-.working-hours-box {
-    background-color: #333;
-    padding: 20px;
-    color: #fff;
-}
-
-.working-hours-icon {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.working-hours-icon i {
-    font-size: 40px;
-    color: #ffc107;
-}
-
-.working-hours-box h4 {
-    margin-bottom: 10px;
-}
-
-.working-hours-box ul {
-    list-style: none;
-    padding: 0;
-}
-
-.working-hours-box ul li {
-    margin-bottom: 10px;
-    color: #ddd;
 }
