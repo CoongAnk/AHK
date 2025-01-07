@@ -1,0 +1,147 @@
+/* CSS Styles for GioiThieu01 - Optimized for Mobile Devices */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.hero-section {
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+}
+
+.highlight-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.highlight-item {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Optimize layout for tablets */
+@media (max-width: 768px) {
+  .highlight-item {
+      flex: 1 1 calc(50% - 20px);
+  }
+
+  .hero-section {
+      padding: 60px 15px;
+  }
+
+  .hero-section h1 {
+      font-size: 2em;
+  }
+
+  .hero-section p {
+      font-size: 1em;
+  }
+}
+
+/* Optimize layout for mobile devices */
+@media (max-width: 480px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar a {
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+  }
+
+  .highlight-item {
+      flex: 1 1 100%;
+  }
+
+  .hero-section {
+      padding: 40px 15px;
+  }
+
+  .hero-section h1 {
+      font-size: 1.8em;
+  }
+
+  .hero-section p {
+      font-size: 0.9em;
+  }
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #fbc02d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}

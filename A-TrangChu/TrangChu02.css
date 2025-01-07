@@ -603,13 +603,13 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .news-items {
     flex: 0 0 50%; /* Chuyển thành hai ảnh khi màn hình nhỏ hơn 1024px */
   }
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .news-items {
     flex: 0 0 100%; /* Chuyển thành một ảnh khi màn hình nhỏ hơn 600px */
   }
